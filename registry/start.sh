@@ -18,4 +18,4 @@ cat /nginx.conf
 # TODO manage processes with supervisor
 uwsgi --daemonize /var/log/uwsgi.log --ini /wsgi.conf
 
-nginx -c /nginx.conf -g "daemon off;"
+exec nginx -c /nginx.conf -g "daemon off;"
